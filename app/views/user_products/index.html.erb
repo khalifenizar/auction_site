@@ -1,0 +1,19 @@
+<h2>
+  Products for auction from
+
+  <a href="<%= user_path(@the_user) %>">
+    <em> <%= @the_user.email %> </em>
+  </a>
+</h2>
+
+<ul>
+  <% @the_user.products.each do |the_product| %>
+    <li>
+      <h3> <%= the_product.title %> </h3>
+      <p>
+        Auction ends:
+        <time> <%= the_product.deadline %> </time>
+      </p>
+    </li>
+  <% end %>
+</ul>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "site#home"
 
   resources :users, only: [:index, :new, :create, :show, :destroy] do
-    resources :products, only: [:new, :create], controller: "user_products"
+    resources :products, only: [:index, :new, :create], controller: "user_products"
   end
 
   resources :products, only: [:index, :show, :destroy]
