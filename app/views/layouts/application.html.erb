@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AuctionSite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <h1> Actn St </h1>
+
+    <% flash.each do |name, message_text| -%>
+      <p> <%= message_text %> </p>
+    <% end -%>
+
+    <%= yield %>
+
+    <footer>
+      <p> Made with &hearts; at Ironhack. </p>
+    </footer>
+
+  </body>
+</html>
