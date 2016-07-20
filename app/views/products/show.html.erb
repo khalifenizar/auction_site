@@ -38,3 +38,15 @@
 
   <%= f.button %>
 <% end %>
+
+
+<h3> Current Bids </h3>
+
+<ul>
+  <% @current_bids.each do |one_bid| %>
+    <li>
+      <strong> $<%= one_bid.amount %> </strong>
+      by <em> <%= one_bid.user.email %> </em>
+    </li>
+  <% end %>
+</ul>
