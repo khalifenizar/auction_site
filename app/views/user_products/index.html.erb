@@ -9,7 +9,12 @@
 <ul>
   <% @the_user.products.each do |the_product| %>
     <li>
-      <h3> <%= the_product.title %> </h3>
+      <h3>
+        <a href="<%= product_path(the_product) %>">
+          <%= the_product.title %>
+        </a>
+      </h3>
+
       <p>
         Auction ends:
         <time> <%= the_product.deadline %> </time>

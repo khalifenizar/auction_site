@@ -1,0 +1,15 @@
+<h2> <%= @the_product.title %> </h2>
+
+<p> <%= @the_product.description %> </p>
+
+<p>
+  Sold by
+  <a href="<%= user_path(@the_product.user) %>">
+    <em> <%= @the_product.user.email %> </em>
+  </a>
+</p>
+
+<p>
+  This auction ends on
+  <time> <%= @the_product.deadline %> </time>
+</p>
