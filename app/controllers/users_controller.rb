@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  def index
+    @users_array = User.all
+    render :index
+  end
+
   def new
     @the_user = User.new
     render :new
@@ -10,7 +15,7 @@ class UsersController < ApplicationController
 
     if @the_user.save
       flash[:notice] = "User #{@the_user.email} created"
-      redirect_to "/"
+      redirect_to "/users"
     else
       flash.now[:alert] = "User couldn't be created"
       render :new
