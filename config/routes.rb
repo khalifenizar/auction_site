@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :new, :create], controller: "user_products"
   end
 
-  resources :products, only: [:index, :show, :destroy]
+  resources :products, only: [:index, :show, :destroy] do
+    resources :bids, only: [:create]
+  end
 
 end

@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
 
   def show
     @the_product = Product.find(params[:id])
+    @the_bid = Bid.new
+
     render :show
   end
 
