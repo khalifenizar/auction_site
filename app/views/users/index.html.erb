@@ -3,8 +3,10 @@
 <ul>
   <% @users_array.each do |the_user| %>
     <li>
-      <%= the_user.name %> -
-      <%= the_user.email %>
+      <a href="<%= user_path(the_user) %>">
+        <%= the_user.name %> -
+        <%= the_user.email %>
+      </a>
     </li>
   <% end %>
 </ul>
